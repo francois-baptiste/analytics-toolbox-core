@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION datascience229608.quadkey.children(quadkey STRING)
+CREATE OR REPLACE FUNCTION `data-science-229608`.quadkey.children(quadkey STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

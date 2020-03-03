@@ -7,7 +7,7 @@ Because the way BigQuery works it is possible to use UDFs that are stored on a d
 That way using a library like Uber H3, it is as simple as:
 
 ``` sql
-SELECT datascience229608.h3.ST_H3(ST_GEOGPOINT(-74.0060,40.7128),11)
+SELECT `data-science-229608`.h3.ST_H3(ST_GEOGPOINT(-74.0060,40.7128),11)
 ```
 
 No need to install anything, just start using them, and if you want to see what functions are available you can always pin the project and you will see all libraries that had been **bigquerified**
@@ -24,7 +24,7 @@ You can get the documentation of a particular library inside its folder.
 We try to maintain the libaries on different versions and a latest folder. You can choose to use a funtion in a particular version or the latest. For example:
 
 ``` sql
-SELECT datascience229608.h3.ST_H3(pointGeog,7)
+SELECT `data-science-229608`.h3.ST_H3(pointGeog,7)
 ```
 
 ## Screenshots and examples
@@ -33,12 +33,12 @@ First library included is H3 so here are a few screenshots of their use.
 
 ``` sql
 WITH data as (
-	SELECT datascience229608.h3.compact(
-  	datascience229608.h3.ST_H3_POLYFILLFROMGEOG(tract_geom,11)) as geo 
+	SELECT `data-science-229608`.h3.compact(
+  	`data-science-229608`.h3.ST_H3_POLYFILLFROMGEOG(tract_geom,11)) as geo 
   	FROM `bigquery-public-data.geo_census_tracts`.census_tracts_new_york 
   	WHERE geo_id='36081000100')
 
-SELECT datascience229608.h3.ST_H3_BOUNDARY(h3) as h3geo 
+SELECT `data-science-229608`.h3.ST_H3_BOUNDARY(h3) as h3geo 
 FROM data,UNNEST(geo) as h3
 ```
 ![alt text](screenshots/compat_census_tract.png)

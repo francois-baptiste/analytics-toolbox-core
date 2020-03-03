@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION datascience229608.quadkey.quadkeyToGeoJsonBoundary(quadkey STRING)
+CREATE OR REPLACE FUNCTION `data-science-229608`.quadkey.quadkeyToGeoJsonBoundary(quadkey STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION datascience229608.h3.h3ToCenterChild(h3Index STRING, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION `data-science-229608`.h3.h3ToCenterChild(h3Index STRING, resolution NUMERIC)
  RETURNS STRING
  LANGUAGE js AS
 """

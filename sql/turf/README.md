@@ -12,5 +12,5 @@ ST_BUFFER(geometry_to_buffer GEOGRAPHY, radius NUMERIC, units STRING, steps NUME
 As taken from https://turfjs.org/docs/#buffer
 
 ``` sql
-SELECT datascience229608.turf.ST_BUFFER(ST_GEOGPOINT(-74.00,40.7128),1,'kilometers',10) as geo
+SELECT `data-science-229608`.turf.ST_BUFFER(ST_GEOGPOINT(-74.00,40.7128),1,'kilometers',10) as geo
 ```

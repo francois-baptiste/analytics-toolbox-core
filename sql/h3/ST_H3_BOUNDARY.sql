@@ -1,3 +1,3 @@
-CREATE OR REPLACE FUNCTION datascience229608.h3.ST_H3_BOUNDARY(h3Index STRING) AS (
-	ST_GEOGFROMGEOJSON(datascience229608.h3.h3ToGeoJsonBoundary(h3Index))
+CREATE OR REPLACE FUNCTION `data-science-229608`.h3.ST_H3_BOUNDARY(h3Index STRING) AS (
+	ST_GEOGFROMGEOJSON(`data-science-229608`.h3.h3ToGeoJsonBoundary(h3Index))
 );

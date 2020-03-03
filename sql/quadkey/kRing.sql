@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION datascience229608.quadkey.kRing(quadkey STRING, ringSize NUMERIC)
+CREATE OR REPLACE FUNCTION `data-science-229608`.quadkey.kRing(quadkey STRING, ringSize NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """
