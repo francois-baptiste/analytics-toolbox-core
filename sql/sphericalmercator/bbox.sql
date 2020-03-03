@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION jslibs.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
+CREATE OR REPLACE FUNCTION data-science-229608.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
   RETURNS ARRAY<FLOAT64>
   LANGUAGE js AS
 """
@@ -11,5 +11,5 @@ CREATE OR REPLACE FUNCTION jslibs.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zo
 
 """
 OPTIONS (
-  library=["gs://bigquery-jslibs/sphericalmercator.js"]
+  library=["gs://bigquery-data-science-229608/sphericalmercator.js"]
 );

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION jslibs.quadkey.quadkeyToGeoJsonBoundary(quadkey STRING)
+CREATE OR REPLACE FUNCTION data-science-229608.quadkey.quadkeyToGeoJsonBoundary(quadkey STRING)
   RETURNS STRING
   LANGUAGE js AS
 """
@@ -19,5 +19,5 @@ return JSON.stringify(geojson);
 
 """
 OPTIONS (
-  library=["gs://bigquery-jslibs/quadkey.js"]
+  library=["gs://bigquery-data-science-229608/quadkey.js"]
 );

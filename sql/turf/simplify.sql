@@ -1,4 +1,4 @@
-CREATE FUNCTION jslibs.turf.simplify(geojson STRING, options STRUCT<tolerance NUMERIC, highQuality BOOL>)
+CREATE FUNCTION data-science-229608.turf.simplify(geojson STRING, options STRUCT<tolerance NUMERIC, highQuality BOOL>)
  RETURNS STRING
  LANGUAGE js AS
 """
@@ -6,5 +6,5 @@ var buffer = turf.simplify(JSON.parse(geojson),{'tolerance':options.tolerance,'h
 return JSON.stringify(buffer.geometry);
 """
 OPTIONS (
- library=["gs://bigquery-jslibs/turf.min.js"]
+ library=["gs://bigquery-data-science-229608/turf.min.js"]
 );

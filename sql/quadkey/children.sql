@@ -1,9 +1,9 @@
-CREATE OR REPLACE FUNCTION jslibs.quadkey.children(quadkey STRING)
+CREATE OR REPLACE FUNCTION data-science-229608.quadkey.children(quadkey STRING)
   RETURNS STRING
   LANGUAGE js AS
 """
 return children(quadkey);  
 """
 OPTIONS (
-  library=["gs://bigquery-jslibs/quadkey.js"]
+  library=["gs://bigquery-data-science-229608/quadkey.js"]
 );
