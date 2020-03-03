@@ -1,4 +1,4 @@
-CREATE FUNCTION data-science-229608.turf.simplify(geojson STRING, options STRUCT<tolerance NUMERIC, highQuality BOOL>)
+CREATE FUNCTION datascience229608.turf.simplify(geojson STRING, options STRUCT<tolerance NUMERIC, highQuality BOOL>)
  RETURNS STRING
  LANGUAGE js AS
 """

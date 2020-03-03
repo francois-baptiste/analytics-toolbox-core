@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION data-science-229608.quadkey.sibling(quadkey STRING, direction STRING)
+CREATE OR REPLACE FUNCTION datascience229608.quadkey.sibling(quadkey STRING, direction STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

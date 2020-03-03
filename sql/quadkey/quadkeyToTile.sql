@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION data-science-229608.quadkey.quadkeyToTile(key STRING)
+CREATE OR REPLACE FUNCTION datascience229608.quadkey.quadkeyToTile(key STRING)
   RETURNS STRUCT<x NUMERIC, y NUMERIC, z NUMERIC>
   LANGUAGE js AS
 """

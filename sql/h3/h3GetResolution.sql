@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION data-science-229608.h3.h3GetResolution(h3Index STRING)
+CREATE OR REPLACE FUNCTION datascience229608.h3.h3GetResolution(h3Index STRING)
  RETURNS NUMERIC
  LANGUAGE js AS
 """

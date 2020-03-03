@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION data-science-229608.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
+CREATE OR REPLACE FUNCTION datascience229608.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
   RETURNS ARRAY<FLOAT64>
   LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE FUNCTION data-science-229608.turf.bbox(geojson STRING)
+CREATE FUNCTION datascience229608.turf.bbox(geojson STRING)
  RETURNS ARRAY<FLOAT64>
  LANGUAGE js AS
 """

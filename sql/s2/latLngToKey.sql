@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION data-science-229608.s2.latLngToKey(latitude FLOAT64, longitude FLOAT64, level NUMERIC)
+CREATE OR REPLACE FUNCTION datascience229608.s2.latLngToKey(latitude FLOAT64, longitude FLOAT64, level NUMERIC)
   RETURNS STRING
   LANGUAGE js AS
 """

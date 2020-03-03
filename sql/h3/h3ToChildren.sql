@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION data-science-229608.h3.h3ToChildren(h3Index STRING, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION datascience229608.h3.h3ToChildren(h3Index STRING, resolution NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """

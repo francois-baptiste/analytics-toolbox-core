@@ -1,4 +1,4 @@
-CREATE FUNCTION data-science-229608.turf.buffer(geojson STRING,radius NUMERIC, options STRUCT<unit STRING,steps NUMERIC>)
+CREATE FUNCTION datascience229608.turf.buffer(geojson STRING,radius NUMERIC, options STRUCT<unit STRING,steps NUMERIC>)
  RETURNS STRING
  LANGUAGE js AS
 """
