@@ -3,7 +3,7 @@ CREATE OR REPLACE FUNCTION `data-science-229608`.turf.simplify(geojson STRING, o
  LANGUAGE js AS
 """
 var buffer = turf.simplify(JSON.parse(geojson),{'tolerance':options.tolerance,'highQuality':options.highQuality, 'mutate': true});
-return JSON.stringify(buffer.geometry);
+return JSON.stringify(buffer);
 """
 OPTIONS (
  library=["gs://bigquery-data-science-229608/turf.min.js"]
