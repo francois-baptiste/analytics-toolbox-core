@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.quadkey.quadkeyToGeoJsonBoundary(quadkey STRING)
+CREATE OR REPLACE FUNCTION libjs4ue.quadkey.quadkeyToGeoJsonBoundary(quadkey STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

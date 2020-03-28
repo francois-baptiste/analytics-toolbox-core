@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.turf.buffer(geojson STRING,radius NUMERIC, options STRUCT<unit STRING,steps NUMERIC>)
+CREATE OR REPLACE FUNCTION libjs4ue.turf.buffer(geojson STRING,radius NUMERIC, options STRUCT<unit STRING,steps NUMERIC>)
  RETURNS STRING
  LANGUAGE js AS
 """

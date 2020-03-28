@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.quadkey.bbox(quadkey STRING)
+CREATE OR REPLACE FUNCTION libjs4ue.quadkey.bbox(quadkey STRING)
   RETURNS ARRAY<STRING>
   LANGUAGE js AS
 """

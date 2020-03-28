@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.h3.h3GetResolution(h3Index STRING)
+CREATE OR REPLACE FUNCTION libjs4ue.h3.h3GetResolution(h3Index STRING)
  RETURNS NUMERIC
  LANGUAGE js AS
 """

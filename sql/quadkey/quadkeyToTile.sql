@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.quadkey.quadkeyToTile(key STRING)
+CREATE OR REPLACE FUNCTION libjs4ue.quadkey.quadkeyToTile(key STRING)
   RETURNS STRUCT<x NUMERIC, y NUMERIC, z NUMERIC>
   LANGUAGE js AS
 """

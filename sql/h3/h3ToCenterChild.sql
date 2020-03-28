@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.h3.h3ToCenterChild(h3Index STRING, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4ue.h3.h3ToCenterChild(h3Index STRING, resolution NUMERIC)
  RETURNS STRING
  LANGUAGE js AS
 """

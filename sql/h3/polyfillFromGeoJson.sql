@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.h3.polyfillFromGeoJson(geojson STRING, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4ue.h3.polyfillFromGeoJson(geojson STRING, resolution NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """

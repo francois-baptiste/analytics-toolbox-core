@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4us.h3.h3IndexesAreNeighbors(origin STRING,destination STRING)
+CREATE OR REPLACE FUNCTION libjs4ue.h3.h3IndexesAreNeighbors(origin STRING,destination STRING)
  RETURNS BOOLEAN
  LANGUAGE js AS
 """
