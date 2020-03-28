@@ -1797,7 +1797,7 @@ var S2 =
         bin += '0';
       }
 
-      return Long.fromString(bin, true, 2).toString(10);
+      return Long.fromString(bin, true, 2).toSigned().toString();
     };
 
     S2.keyToId = S2.S2Cell.keyToId
@@ -1873,32 +1873,8 @@ var S2 =
       };
 
 
-    S2.S2Cell.latLngToId = S2.latLngToId
-      = S2.latLngToQuadkey = function (lat, lng, level) {
-        if (isNaN(level) || level < 1 || level > 30) {
-          throw new Error("'level' is not a number between 1 and 30 (but it should be)");
-        }
-        // TODO
-        //
-        // S2.idToLatLng(id)
-        // S2.keyToLatLng(key)
-        // S2.nextFace(key)     // prevent wrapping on nextKey
-        // S2.prevFace(key)     // prevent wrapping on prevKey
-        //
-        // .toKeyArray(id)  // face,quadtree
-        // .toKey(id)       // hilbert
-        // .toPoint(id)     // ij
-        // .toId(key)       // uint64 (as string)
-        // .toLong(key)     // long.js
-        // .toLatLng(id)    // object? or array?, or string (with comma)?
-        //
-        // maybe S2.HQ.x, S2.GPS.x, S2.CI.x?
-        var key = S2.S2Cell.FromLatLng({ lat: lat, lng: lng }, level).toHilbertQuadkey();
-		
-		var parts = key.split('/');
-		
-		return S2.fromFacePosLevel(parts[0], parts[1], parts[1].length);
-		
+    S2.S2Cell.latLngToId = S2.latLngToId = function (lat, lng, level) {
+        return S2.keyToId(S2.S2Cell.latLngToKey(lat, lng, level));
       };
 
 
