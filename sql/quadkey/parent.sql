@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.quadkey.parent(quadkey STRING)
+CREATE OR REPLACE FUNCTION libjs4usquadkey.parent(quadkey STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.h3.h3ToGeoJsonBoundary(h3Index STRING)
+CREATE OR REPLACE FUNCTION libjs4ush3.h3ToGeoJsonBoundary(h3Index STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

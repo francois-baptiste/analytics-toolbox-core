@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.turf.bbox(geojson STRING)
+CREATE OR REPLACE FUNCTION libjs4usturf.bbox(geojson STRING)
  RETURNS ARRAY<FLOAT64>
  LANGUAGE js AS
 """

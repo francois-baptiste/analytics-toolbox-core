@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.h3.geoToH3(latitude FLOAT64, longitude FLOAT64, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4ush3.geoToH3(latitude FLOAT64, longitude FLOAT64, resolution NUMERIC)
   RETURNS STRING
   LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.h3.h3ToChildren(h3Index STRING, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4ush3.h3ToChildren(h3Index STRING, resolution NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """

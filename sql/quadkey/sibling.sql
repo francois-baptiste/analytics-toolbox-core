@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.quadkey.sibling(quadkey STRING, direction STRING)
+CREATE OR REPLACE FUNCTION libjs4usquadkey.sibling(quadkey STRING, direction STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

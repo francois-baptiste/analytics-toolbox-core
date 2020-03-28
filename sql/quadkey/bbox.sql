@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.quadkey.bbox(quadkey STRING)
+CREATE OR REPLACE FUNCTION libjs4usquadkey.bbox(quadkey STRING)
   RETURNS ARRAY<STRING>
   LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.h3.uncompact(compactedSet ARRAY<STRING>, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4ush3.uncompact(compactedSet ARRAY<STRING>, resolution NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION geolib.s2.latLngToKey(latitude FLOAT64, longitude FLOAT64, level NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4uss2.latLngToKey(latitude FLOAT64, longitude FLOAT64, level NUMERIC)
   RETURNS STRING
   LANGUAGE js AS
 """
