@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION jslibs.turf.buffer(geojson STRING,radius NUMERIC, options STRUCT<unit STRING,steps NUMERIC>)
+CREATE OR REPLACE FUNCTION geolib.turf.buffer(geojson STRING,radius NUMERIC, options STRUCT<unit STRING,steps NUMERIC>)
  RETURNS STRING
  LANGUAGE js AS
 """
@@ -6,5 +6,5 @@ var buffer = turf.buffer(JSON.parse(geojson),radius,{'unit':options.unit,'steps'
 return JSON.stringify(buffer.geometry);
 """
 OPTIONS (
- library=["gs://bigquery-jslibs/turf.min.js"]
+ library=["gs://bigquery-geolib/turf.min.js"]
 );

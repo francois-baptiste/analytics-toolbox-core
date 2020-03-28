@@ -1,3 +1,3 @@
-CREATE OR REPLACE FUNCTION jslibs.quadkey.ST_QUADKEY_POLYFILLFROMGEOG(geo GEOGRAPHY, resolution NUMERIC) AS (
-	jslibs.quadkey.polyfillFromGeoJson(ST_ASGEOJSON(geo),resolution)
+CREATE OR REPLACE FUNCTION geolib.quadkey.ST_QUADKEY_POLYFILLFROMGEOG(geo GEOGRAPHY, resolution NUMERIC) AS (
+	geolib.quadkey.polyfillFromGeoJson(ST_ASGEOJSON(geo),resolution)
 );
