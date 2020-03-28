@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4us.s2.latLngToKey(latitude FLOAT64, longitude F
 return S2.latLngToKey(latitude, longitude, level);
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/s2geometry.js"]
+  library=["gs://bigquery-geolib/s2geometry.js"]
 );

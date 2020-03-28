@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4us.proj4js.proj4(fromProjection STRING, toProje
 return proj4(fromProjection,toProjection,coordinates);  
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/proj4.js"]
+  library=["gs://bigquery-geolib/proj4.js"]
 );

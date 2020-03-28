@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4us.quadkey.locationToQuadkey(latitude FLOAT64, 
 return locationToQuadkey({ lat: latitude, lng: longitude }, resolution);
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/quadkey.js"]
+  library=["gs://bigquery-geolib/quadkey.js"]
 );

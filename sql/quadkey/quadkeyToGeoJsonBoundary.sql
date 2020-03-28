@@ -19,5 +19,5 @@ return JSON.stringify(geojson);
 
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/quadkey.js"]
+  library=["gs://bigquery-geolib/quadkey.js"]
 );

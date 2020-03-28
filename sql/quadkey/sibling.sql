@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4us.quadkey.sibling(quadkey STRING, direction ST
 return sibling(quadkey,direction);  
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/quadkey.js"]
+  library=["gs://bigquery-geolib/quadkey.js"]
 );

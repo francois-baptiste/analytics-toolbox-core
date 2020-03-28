@@ -11,5 +11,5 @@ CREATE OR REPLACE FUNCTION libjs4us.sphericalmercator.bbox(x NUMERIC, y NUMERIC,
 
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/sphericalmercator.js"]
+  library=["gs://bigquery-geolib/sphericalmercator.js"]
 );

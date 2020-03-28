@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Deploy JS libraries
-gsutil cp libs/*  gs://bigquery-libjs4us/
+gsutil cp libs/*  gs://bigquery-geolib/
 
 #Iterate over all SQLs and run them in BQ
 find "$(pwd)" -name "*.sql" | sort  -z |while read fname; do

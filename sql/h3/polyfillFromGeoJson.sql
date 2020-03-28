@@ -6,5 +6,5 @@ var pol =JSON.parse(geojson)
 return h3.polyfill(pol.coordinates[0],resolution,true);
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/h3-js.umd.js"]
+  library=["gs://bigquery-geolib/h3-js.umd.js"]
 );

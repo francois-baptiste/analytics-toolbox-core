@@ -6,5 +6,5 @@ var p = h3.h3ToGeo(h3Index);
 return "POINT("+p[1]+" "+p[0]+")";
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/h3-js.umd.js"]
+  library=["gs://bigquery-geolib/h3-js.umd.js"]
 );

@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4us.turf.bbox(geojson STRING)
 	return turf.bbox(JSON.parse(geojson));
 """
 OPTIONS (
- library=["gs://bigquery-libjs4us/turf.min.js"]
+ library=["gs://bigquery-geolib/turf.min.js"]
 );

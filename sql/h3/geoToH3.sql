@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4us.h3.geoToH3(latitude FLOAT64, longitude FLOAT
 return h3.geoToH3(latitude, longitude, resolution);
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/h3-js.umd.js"]
+  library=["gs://bigquery-geolib/h3-js.umd.js"]
 );

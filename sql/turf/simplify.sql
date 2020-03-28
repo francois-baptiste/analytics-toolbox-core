@@ -6,5 +6,5 @@ var buffer = turf.simplify(JSON.parse(geojson),{'tolerance':options.tolerance,'h
 return JSON.stringify(buffer);
 """
 OPTIONS (
- library=["gs://bigquery-libjs4us/turf.min.js"]
+ library=["gs://bigquery-geolib/turf.min.js"]
 );

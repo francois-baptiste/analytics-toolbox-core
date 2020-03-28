@@ -6,5 +6,5 @@ var pol = JSON.parse(geojson);
 return geojsonToQuadkeys(pol, {min_zoom: level,max_zoom: level});
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/quadkey.js","gs://bigquery-libjs4us/tilecover.js"]
+  library=["gs://bigquery-geolib/quadkey.js","gs://bigquery-geolib/tilecover.js"]
 );

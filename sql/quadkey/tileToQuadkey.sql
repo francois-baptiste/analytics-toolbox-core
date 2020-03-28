@@ -5,6 +5,6 @@ CREATE OR REPLACE FUNCTION libjs4us.quadkey.tileToQuadkey(x NUMERIC, y NUMERIC, 
 return tileToQuadkey({ x: x, y: y }, z);
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4us/quadkey.js"]
+  library=["gs://bigquery-geolib/quadkey.js"]
 );
 
