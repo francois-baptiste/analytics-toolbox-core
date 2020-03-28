@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ue.quadkey.locationToQuadkey(latitude FLOAT64, longitude FLOAT64, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4eu.quadkey.locationToQuadkey(latitude FLOAT64, longitude FLOAT64, resolution NUMERIC)
   RETURNS STRING
   LANGUAGE js AS
 """

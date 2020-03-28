@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ue.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
+CREATE OR REPLACE FUNCTION libjs4eu.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
   RETURNS ARRAY<FLOAT64>
   LANGUAGE js AS
 """

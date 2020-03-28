@@ -1,3 +1,3 @@
-CREATE OR REPLACE FUNCTION libjs4ue.h3.ST_H3_POLYFILLFROMGEOG(geo GEOGRAPHY, resolution NUMERIC) AS (
-	libjs4ue.h3.polyfillFromGeoJson(ST_ASGEOJSON(geo),resolution)
+CREATE OR REPLACE FUNCTION libjs4eu.h3.ST_H3_POLYFILLFROMGEOG(geo GEOGRAPHY, resolution NUMERIC) AS (
+	libjs4eu.h3.polyfillFromGeoJson(ST_ASGEOJSON(geo),resolution)
 );

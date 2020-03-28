@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ue.quadkey.kRing(quadkey STRING, ringSize NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4eu.quadkey.kRing(quadkey STRING, ringSize NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """

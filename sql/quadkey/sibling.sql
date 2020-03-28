@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ue.quadkey.sibling(quadkey STRING, direction STRING)
+CREATE OR REPLACE FUNCTION libjs4eu.quadkey.sibling(quadkey STRING, direction STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ue.quadkey.children(quadkey STRING)
+CREATE OR REPLACE FUNCTION libjs4eu.quadkey.children(quadkey STRING)
   RETURNS STRING
   LANGUAGE js AS
 """

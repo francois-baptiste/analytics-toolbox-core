@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ue.quadkey.polyfillFromGeoJson(geojson STRING, level NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4eu.quadkey.polyfillFromGeoJson(geojson STRING, level NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ue.turf.simplify(geojson STRING, options STRUCT<tolerance NUMERIC, highQuality BOOL>)
+CREATE OR REPLACE FUNCTION libjs4eu.turf.simplify(geojson STRING, options STRUCT<tolerance NUMERIC, highQuality BOOL>)
  RETURNS STRING
  LANGUAGE js AS
 """
