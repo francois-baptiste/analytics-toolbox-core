@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4usquadkey.quadkeyToTile(key STRING)
+CREATE OR REPLACE FUNCTION libjs4us.quadkey.quadkeyToTile(key STRING)
   RETURNS STRUCT<x NUMERIC, y NUMERIC, z NUMERIC>
   LANGUAGE js AS
 """
@@ -7,6 +7,6 @@ xy.z=key.length;
 return xy;
 """
 OPTIONS (
-  library=["gs://bigquery-geolib/quadkey.js"]
+  library=["gs://bigquery-libjs4us/quadkey.js"]
 );
 

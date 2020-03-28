@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION libjs4ussphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
+CREATE OR REPLACE FUNCTION libjs4us.sphericalmercator.bbox(x NUMERIC, y NUMERIC,zoom NUMERIC, tileSize NUMERIC )
   RETURNS ARRAY<FLOAT64>
   LANGUAGE js AS
 """
@@ -11,5 +11,5 @@ CREATE OR REPLACE FUNCTION libjs4ussphericalmercator.bbox(x NUMERIC, y NUMERIC,z
 
 """
 OPTIONS (
-  library=["gs://bigquery-geolib/sphericalmercator.js"]
+  library=["gs://bigquery-libjs4us/sphericalmercator.js"]
 );

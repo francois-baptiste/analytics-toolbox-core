@@ -1,9 +1,9 @@
-CREATE OR REPLACE FUNCTION libjs4usquadkey.sibling(quadkey STRING, direction STRING)
+CREATE OR REPLACE FUNCTION libjs4us.quadkey.sibling(quadkey STRING, direction STRING)
   RETURNS STRING
   LANGUAGE js AS
 """
 return sibling(quadkey,direction);  
 """
 OPTIONS (
-  library=["gs://bigquery-geolib/quadkey.js"]
+  library=["gs://bigquery-libjs4us/quadkey.js"]
 );
