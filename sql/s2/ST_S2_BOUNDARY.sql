@@ -1,3 +1,3 @@
-CREATE OR REPLACE FUNCTION libjs4eu.s2.ST_S2_BOUNDARY(h3Index STRING) AS (
-	ST_GEOGFROMGEOJSON(libjs4eu.s2.getCornerLatLngs(h3Index))
+CREATE OR REPLACE FUNCTION jslibs.s2.ST_S2_BOUNDARY(h3Index STRING) AS (
+	ST_GEOGFROMGEOJSON(jslibs.s2.getCornerLatLngs(h3Index))
 );

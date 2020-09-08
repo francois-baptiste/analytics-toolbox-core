@@ -1,5 +1,5 @@
-CREATE OR REPLACE FUNCTION libjs4eu.s2.getCornerLatLngs(key STRING) RETURNS STRING LANGUAGE js
-OPTIONS (library=["gs://bigquery-libjs4eu/s2geometry.js"]) AS """
+CREATE OR REPLACE FUNCTION jslibs.s2.keyToCornerLatLngs(key STRING) RETURNS STRING LANGUAGE js
+OPTIONS (library=["gs://bigquery-jslibs/s2geometry.js"]) AS """
 var cornerLatLng = S2.S2Cell.FromHilbertQuadKey(key).getCornerLatLngs();
 var geojson = {
     "type": "Polygon",
