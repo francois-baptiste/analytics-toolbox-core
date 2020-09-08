@@ -1,51 +1,7 @@
 #!/bin/bash
 
-#Deploy JS libraries
-gsutil cp libs/*  gs://bigquery-geolib/
-
-#regions where to deploy. default_us is there to denote the default wich is US and not qualified
-regions=( eu us default_us )
-
-#create datsets if it does not exist Datasets in all regions
-ls sql | sort -z|while read libname; do
-  #we iterate over the regions
-  for reg in "${regions[@]}"
-  do
-    #we create the daset with no region for backwards compatibility
-    if [[ "$reg" == "default_us" ]];
-    then
-      region="eu"
-      datasetname="$libname"
-    else
-      region="$reg"
-      datasetname="${reg}_${libname}"
-    fi
-
-    #create the dataset
-    bq --location="$region" mk -d \
-    --description "Dataset in ${region} for functions of library: ${libname}" \
-    "$datasetname"
-
-    #To add allAuthenticatedUsers to the dataset we grab the just created permission
-    bq show --format=prettyjson \
-    libjs4eu:"$datasetname" > permissions.json
-  
-    #add the permision to temp file
-    sed  '/"access": \[/a \ 
-    {"role": "READER","specialGroup": "allAuthenticatedUsers"},' permissions.json > updated_permission.json
-
-    #we update with the new permissions file
-    bq update --source updated_permission.json libjs4eu:"$datasetname"
-
-    #cleanup
-    rm updated_permission.json
-    rm permissions.json
-  done
-done
 
 
-#We go over all the SQLs and replace for example libjs4eu.s2. with libjs4eu.eu_s2.
-#BIT HACKY
 
 #Iterate over all SQLs and run them in BQ
 find "$(pwd)" -name "*.sql" | sort  -z |while read fname; do
@@ -58,22 +14,9 @@ find "$(pwd)" -name "*.sql" | sort  -z |while read fname; do
   #we iterate over the regions to update or create all functions in the different regions
   for reg in "${regions[@]}"
   do
-    if [[ "$reg" == "default_us" ]];
-    then
-      datasetname="${libname}"
-    else
-      datasetname="${reg}_${libname}"
-    fi
-    
-    #string to match
-    search="libjs4eu.${libname}.${function_name}"
-    replace="libjs4eu.${datasetname}.${function_name}"
 
-    echo "CREATING OR UPDATING ${replace}"
 
-    sed "s/${search}/${replace}/g" $fname > tmp.file
-    bq --project_id libjs4eu query --use_legacy_sql=false --flagfile=tmp.file
-    rm tmp.file
+    bq --project_id libjs4eu query --use_legacy_sql=false --flagfile=$fname
 
   done
 done

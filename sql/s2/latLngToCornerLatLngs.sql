@@ -1,5 +1,5 @@
-CREATE OR REPLACE FUNCTION jslibs.s2.latLngToCornerLatLngs(latitude FLOAT64, longitude FLOAT64, level NUMERIC) RETURNS STRING LANGUAGE js
-OPTIONS (library=["gs://bigquery-jslibs/s2geometry.js"]) AS """
+CREATE OR REPLACE FUNCTION libjs4eu.s2.latLngToCornerLatLngs(latitude FLOAT64, longitude FLOAT64, level NUMERIC) RETURNS STRING LANGUAGE js
+OPTIONS (library=["gs://bigquery-libjs4eu/s2geometry.js"]) AS """
 var cornerLatLng = S2.S2Cell.FromLatLng({ lat: latitude, lng: longitude }, level).getCornerLatLngs();
 var geojson = {
     "type": "Polygon",
