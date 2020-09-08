@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION jslibs.quadkey.kRing(quadkey STRING, ringSize NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4eu.quadkey.kRing(quadkey STRING, ringSize NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """
@@ -15,5 +15,5 @@ return [left,topleft,downleft,right,topright,downright,up,down,quadkey];
 
 """
 OPTIONS (
-  library=["gs://bigquery-jslibs/quadkey.js"]
+  library=["gs://bigquery-libjs4eu/quadkey.js"]
 );

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION jslibs.h3.h3ToGeoJsonBoundary(h3Index STRING)
+CREATE OR REPLACE FUNCTION libjs4eu.h3.h3ToGeoJsonBoundary(h3Index STRING)
   RETURNS STRING
   LANGUAGE js AS
 """
@@ -10,5 +10,5 @@ var geojson = {
 return JSON.stringify(geojson);
 """
 OPTIONS (
-  library=["gs://bigquery-jslibs/h3-js.umd.js"]
+  library=["gs://bigquery-libjs4eu/h3-js.umd.js"]
 );

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Deploy JS libraries
-gsutil cp libs/*  gs://bigquery-jslibs/
+gsutil cp libs/*  gs://bigquery-geolib/
 
 #regions where to deploy. default_us is there to denote the default wich is US and not qualified
 regions=( eu us default_us )
@@ -14,7 +14,7 @@ ls sql | sort -z|while read libname; do
     #we create the daset with no region for backwards compatibility
     if [[ "$reg" == "default_us" ]];
     then
-      region="us"
+      region="eu"
       datasetname="$libname"
     else
       region="$reg"
@@ -28,14 +28,14 @@ ls sql | sort -z|while read libname; do
 
     #To add allAuthenticatedUsers to the dataset we grab the just created permission
     bq show --format=prettyjson \
-    jslibs:"$datasetname" > permissions.json
+    libjs4eu:"$datasetname" > permissions.json
   
     #add the permision to temp file
     sed  '/"access": \[/a \ 
     {"role": "READER","specialGroup": "allAuthenticatedUsers"},' permissions.json > updated_permission.json
 
     #we update with the new permissions file
-    bq update --source updated_permission.json jslibs:"$datasetname"    
+    bq update --source updated_permission.json libjs4eu:"$datasetname"
 
     #cleanup
     rm updated_permission.json
@@ -44,7 +44,7 @@ ls sql | sort -z|while read libname; do
 done
 
 
-#We go over all the SQLs and replace for example jslibs.s2. with jslibs.eu_s2.
+#We go over all the SQLs and replace for example libjs4eu.s2. with libjs4eu.eu_s2.
 #BIT HACKY
 
 #Iterate over all SQLs and run them in BQ
@@ -66,13 +66,13 @@ find "$(pwd)" -name "*.sql" | sort  -z |while read fname; do
     fi
     
     #string to match
-    search="jslibs.${libname}.${function_name}"
-    replace="jslibs.${datasetname}.${function_name}"
+    search="libjs4eu.${libname}.${function_name}"
+    replace="libjs4eu.${datasetname}.${function_name}"
 
     echo "CREATING OR UPDATING ${replace}"
 
     sed "s/${search}/${replace}/g" $fname > tmp.file
-    bq --project_id jslibs query --use_legacy_sql=false --flagfile=tmp.file
+    bq --project_id libjs4eu query --use_legacy_sql=false --flagfile=tmp.file
     rm tmp.file
 
   done

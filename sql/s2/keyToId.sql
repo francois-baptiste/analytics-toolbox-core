@@ -5,5 +5,5 @@ CREATE TEMP FUNCTION keyToId(key STRING)
 return S2.keyToId(key);
 """;
 OPTIONS (
-  library=["gs://bigquery-jslibs/s2geometry.js"]
+  library=["gs://bigquery-libjs4eu/s2geometry.js"]
 );

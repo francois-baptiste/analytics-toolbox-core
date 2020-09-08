@@ -2,12 +2,12 @@
 
 BigQuery allows you to create UDF functions using JS. In order to do so you have to upload the JS library into a Google Cloud Storage bucket and then create wrapper UDF functions to call them. We find the need of using external libraries very often so we have created this repo of prepared libraries to be used within BigQuery.
 
-Because the way BigQuery works it is possible to use UDFs that are stored on a different project/dataset than the account you are calling from. So instead of asking you to push these functions to your own BigQuery project we have made them already available inside a project called `jslibs` in the us-region.
+Because the way BigQuery works it is possible to use UDFs that are stored on a different project/dataset than the account you are calling from. So instead of asking you to push these functions to your own BigQuery project we have made them already available inside a project called `libjs4eu` in the us-region.
 
 That way using a library like Uber H3, it is as simple as:
 
 ``` sql
-SELECT jslibs.h3.ST_H3(ST_GEOGPOINT(-74.0060,40.7128),11)
+SELECT libjs4eu.h3.ST_H3(ST_GEOGPOINT(-74.0060,40.7128),11)
 ```
 
 No need to install anything, just start using them, and if you want to see what functions are available you can always pin the project and you will see all libraries that had been **bigquerified**
@@ -17,9 +17,9 @@ No need to install anything, just start using them, and if you want to see what 
 BigQuery allows you to run functions or more specifically datasets from within the same [regional location](https://cloud.google.com/bigquery/docs/locations). So if you are running a query for a dataset in the EU region you are going to have to use the eu functions. We have created for each function the following signatures:
 
 ```
-jslibs.h3.ST_H3
-jslibs.us_h3.ST_H3
-jslibs.eu_h3.ST_H3
+libjs4eu.h3.ST_H3
+libjs4eu.us_h3.ST_H3
+libjs4eu.eu_h3.ST_H3
 ```
 They are identical. The one not qualified, the first one is on US and is just there for convinience. If you need to access these functions from within a different location than US or EU, you should install yourself the functions on your location. 
 
@@ -34,7 +34,7 @@ You can get the documentation of a particular library inside its folder.
 We try to maintain the libaries on different versions and a latest folder. You can choose to use a funtion in a particular version or the latest. For example:
 
 ``` sql
-SELECT jslibs.h3.ST_H3(pointGeog,7)
+SELECT libjs4eu.h3.ST_H3(pointGeog,7)
 ```
 
 ## How about visualizing very large datasets or creating vector tiles ##
@@ -53,12 +53,12 @@ First library included is H3 so here are a few screenshots of their use.
 
 ``` sql
 WITH data as (
-	SELECT jslibs.h3.compact(
-  	jslibs.h3.ST_H3_POLYFILLFROMGEOG(tract_geom,11)) as geo 
+	SELECT libjs4eu.h3.compact(
+  	libjs4eu.h3.ST_H3_POLYFILLFROMGEOG(tract_geom,11)) as geo 
   	FROM `bigquery-public-data.geo_census_tracts`.census_tracts_new_york 
   	WHERE geo_id='36081000100')
 
-SELECT jslibs.h3.ST_H3_BOUNDARY(h3) as h3geo 
+SELECT libjs4eu.h3.ST_H3_BOUNDARY(h3) as h3geo 
 FROM data,UNNEST(geo) as h3
 ```
 ![alt text](screenshots/compat_census_tract.png)

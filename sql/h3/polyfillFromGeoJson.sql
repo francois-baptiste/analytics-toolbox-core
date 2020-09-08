@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION jslibs.h3.polyfillFromGeoJson(geojson STRING, resolution NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4eu.h3.polyfillFromGeoJson(geojson STRING, resolution NUMERIC)
  RETURNS ARRAY<STRING>
  LANGUAGE js AS
 """
@@ -22,5 +22,5 @@ CREATE OR REPLACE FUNCTION jslibs.h3.polyfillFromGeoJson(geojson STRING, resolut
   return hexes;
 """
 OPTIONS (
-  library=["gs://bigquery-jslibs/h3-js.umd.js"]
+  library=["gs://bigquery-libjs4eu/h3-js.umd.js"]
 );

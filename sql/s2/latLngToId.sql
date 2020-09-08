@@ -1,9 +1,9 @@
-CREATE OR REPLACE FUNCTION jslibs.s2.latLngToId(latitude FLOAT64, longitude FLOAT64, level NUMERIC)
+CREATE OR REPLACE FUNCTION libjs4eu.s2.latLngToId(latitude FLOAT64, longitude FLOAT64, level NUMERIC)
   RETURNS STRING
   LANGUAGE js AS
 """
 return S2.latLngToId(latitude, longitude, level);
 """
 OPTIONS (
-  library=["gs://bigquery-jslibs/s2geometry.js"]
+  library=["gs://bigquery-libjs4eu/s2geometry.js"]
 );
