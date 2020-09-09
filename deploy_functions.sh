@@ -10,9 +10,7 @@ find "$(pwd)" -name "*.sql" | sort  -z |while read fname; do
   libname=$(echo $DIR | sed -e 's;.*\/;;')
   file_name=$(basename "${fname}")
   function_name="${file_name%.*}"
-
-
-    bq --project_id libjs4eu query --use_legacy_sql=false --flagfile=$fname
+  bq --project_id libjs4eu query --use_legacy_sql=false --flagfile=$fname
 
 done
 

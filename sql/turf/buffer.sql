@@ -6,5 +6,5 @@ var buffer = turf.buffer(JSON.parse(geojson),radius,{'unit':options.unit,'steps'
 return JSON.stringify(buffer.geometry);
 """
 OPTIONS (
- library=["gs://bigquery-libjs4eu/turf.min.js"]
+ library=["gs://bigquery-jslibs/turf.min.js"]
 );

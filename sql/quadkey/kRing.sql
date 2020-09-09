@@ -15,5 +15,5 @@ return [left,topleft,downleft,right,topright,downright,up,down,quadkey];
 
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4eu/quadkey.js"]
+  library=["gs://bigquery-jslibs/quadkey.js"]
 );

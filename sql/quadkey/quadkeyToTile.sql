@@ -7,6 +7,6 @@ xy.z=key.length;
 return xy;
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4eu/quadkey.js"]
+  library=["gs://bigquery-jslibs/quadkey.js"]
 );
 

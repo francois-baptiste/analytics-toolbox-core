@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4eu.s2.idToLng(key STRING)
 return S2.idToLatLng(key)["lng"];
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4eu/s2geometry.js"]
+  library=["gs://bigquery-jslibs/s2geometry.js"]
 );

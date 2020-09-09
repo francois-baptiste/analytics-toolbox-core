@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4eu.h3.h3GetFaces(h3Index STRING)
 return h3.h3GetFaces(h3Index);
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4eu/h3-js.umd.js"]
+  library=["gs://bigquery-jslibs/h3-js.umd.js"]
 );

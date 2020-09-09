@@ -5,5 +5,5 @@ CREATE OR REPLACE FUNCTION libjs4eu.s2.idToKey(key INT64)
 return S2.idToKey(key);
 """
 OPTIONS (
-  library=["gs://bigquery-libjs4eu/s2geometry.js"]
+  library=["gs://bigquery-jslibs/s2geometry.js"]
 );
